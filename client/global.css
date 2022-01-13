@@ -1,0 +1,15 @@
+* {
+	font-family: "Overpass", sans-serif;
+	caret-color: #ff4500;
+	outline: none;
+	user-select: none;
+	color: #fff;
+}
+
+body {
+	background: #000;
+}
+
+::selection {
+	background-color: #ff4500;
+}

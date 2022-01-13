@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sabotage</title>
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
+			rel="stylesheet"
+		/>
+		<!--  -->
+
+		<link rel="stylesheet" href="global.css" />
+		<link rel="stylesheet" href="mainmenu.css" />
+	</head>
+	<body>
+		<canvas id="background"></canvas>
+		<div class="blurlayer"></div>
+
+		<div class="title">
+			<h1>Sabotage</h1>
+			<p style="font-size: 11pt">Sabotage your friends >:) *or your enemies</p>
+		</div>
+
+		<div class="code-input">
+			<input
+				type="number"
+				autocomplete="off"
+				placeholder="GAME CODE"
+				id="code"
+			/>
+			<button id="join">Join</button>
+		</div>
+
+		<div id="fadescreen"></div>
+
+		<div id="debugMenu">
+			<input type="text" placeholder="custom packet" id="custompacket" />
+			<button id="sendcustom">send</button>
+			<br /><br />
+		</div>
+
+		<script src="mainmenu.js"></script>
+	</body>
+</html>
