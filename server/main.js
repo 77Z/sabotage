@@ -2,10 +2,8 @@ const { WebSocketServer } = require("ws");
 const { v4: uuidv4 } = require("uuid");
 require("colors");
 
+//TODO: Change this back to 80
 const wss = new WebSocketServer({ port: 8080 });
-
-let hello = "fesiofjo";
-let clients = [];
 
 setInterval(function () {
 	wss.clients.forEach(function each(client) {
@@ -23,12 +21,6 @@ wss.on("connection", function connection(ws) {
 	ws.name = null;
 	ws.type = "player";
 	ws.score = 0;
-	// clients.push({
-	// 	uid: ws.id,
-	// 	name: null,
-	// 	type: "player",
-	// 	score: 0,
-	// });
 
 	ws.on("message", (data) => {
 		try {
@@ -47,7 +39,12 @@ wss.on("connection", function connection(ws) {
 					break;
 				}
 				case "HOSTkickPlayer": {
-					if (ws.type == "host") hostFunctions.kickPlayer(message.data);
+					if (ws.type == "host")
+						hostFunctions.kickPlayer(message.data);
+					break;
+				}
+				case "HOSTstartGame": {
+					if (ws.type == "host") console.log("Starting game");
 					break;
 				}
 				default: {
@@ -71,7 +68,9 @@ function changeNameOfUid(id, newName) {
 	// }
 	wss.clients.forEach(function each(client) {
 		if (client.id == id) {
-			console.log("client: " + id + " wants to change name to: " + newName);
+			console.log(
+				"client: " + id + " wants to change name to: " + newName
+			);
 			client.name = newName;
 			return;
 		}
