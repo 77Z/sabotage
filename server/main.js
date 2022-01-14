@@ -5,10 +5,19 @@ require("colors");
 //TODO: Change this back to 80
 const wss = new WebSocketServer({ port: 8080 });
 
+let gameCode = Math.random().toString().split(".")[1].substring(0, 5);
+let cards = [];
+
 setInterval(function () {
 	wss.clients.forEach(function each(client) {
-		// client.send(msg);
-		console.log(client);
+		client.send(
+			JSON.stringify({
+				packet: "ping",
+				data: "pING",
+			})
+		);
+		console.log("ping sent");
+		// console.log(client);
 	});
 }, 1000);
 
@@ -43,9 +52,17 @@ wss.on("connection", function connection(ws) {
 						hostFunctions.kickPlayer(message.data);
 					break;
 				}
+				case "HOSTgetGameCode": {
+					if (ws.type == "host") hostFunctions.getGameCode();
+					break;
+				}
 				case "HOSTstartGame": {
 					if (ws.type == "host") console.log("Starting game");
 					break;
+				}
+				case "HOSTsendQuizletSet": {
+					if (ws.type == "host")
+						hostFunctions.quizletUpdate(message.data);
 				}
 				default: {
 					throw new Error("Invalid packet data!");
@@ -107,4 +124,38 @@ let hostFunctions = {
 			}
 		});
 	},
+	getGameCode: function () {
+		wss.clients.forEach(function each(client) {
+			if (client.type == "host") {
+				console.log("sent game code");
+				client.send(
+					JSON.stringify({
+						packet: "gameCode",
+						data: gameCode,
+					})
+				);
+				client.close();
+			}
+		});
+	},
+	quizletUpdate: function (set) {
+		cards = set.trim().split("\n");
+		console.log("CARDS UPDATED!");
+	},
 };
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_number_between_two_values
+function getRandomArbitrary(min, max) {
+	return Math.random() * (max - min) + min;
+}
+
+function generateQuestion() {
+	getRandomArbitrary(0, cards.length - 1);
+}
+
+function getQuestionFromCard(cardnum) {
+	cards[cardnum].split("\t")[1];
+}
+function getAnswerFromCard(cardnum) {
+	cards[cardnum].split("\t")[0];
+}

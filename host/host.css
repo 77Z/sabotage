@@ -2,12 +2,32 @@
 	text-align: center;
 }
 
+h1 {
+	font-size: 40pt;
+}
+
+h3 {
+	font-size: 25pt;
+}
+
 .playerlist {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	height: 80%;
 	width: 40%;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+.playerlist h3 {
+	margin: 0;
+	cursor: pointer;
+}
+
+.playerlist h3:hover {
+	text-decoration: line-through;
+	color: red;
 }
 
 .playButtonContainer {

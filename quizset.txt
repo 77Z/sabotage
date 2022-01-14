@@ -1,0 +1,30 @@
+infection control	A set of practices and procedures that prevent or stop the spread of infection in healthcare settings
+microorganisms	Living creatures that are too small to see with the naked eye
+non-pathogens	a microorganism that is not capable of causing a disease
+pathogens	disease causing agents
+bacteria	one-celled microorganisms that are classified by shape; can produce spores
+spores	preserve genetic material and help bacteria survive harsh environments
+parasite	An organism that feeds on a living host
+fungi	plant-like microorganisms that can be found in the air, in soil, on plants, or in water
+virus	smallest type or microorganism that causes disease by invading host cells where they take nutrients to multiply
+endogenous infection	caused by microorganisms already present in the human body
+exogenous infection	caused by microorganisms or pathogens entering the human body from the outside environment
+noscomial infections/ healthcare-acquired infections	acquired by a person while in the healthcare setting
+opportunistic infection	occur when the body's defenses/immune system are weak
+infectious disease	results from an invasion of microorganisms
+communicable disease	a disease that is spread from one host to another
+chain of infection	conditions that must be met to pass a disease from one person to another
+asepsis	condition free of pathogens
+medical asepsis/clean technique	maintaining a clean environment in order to reduce the number of pathogens
+surgical asepsis	maintaining a sterile environment such as that found in operating rooms
+sterile field/sterile technique	environment that is free from all microorganisms and spores
+sterilization	highest level of asepsis, type of surgical asepsis that kills all microorganisms, including viruses and spores
+disinfection	middle level of asepsis
+cleaning	lowest level of asepsis and is the removal of visible organic or inorganic material from objects and surfaces
+hand cleansing	most basic and important type of medical asepsis and is the number one way to prevent infection
+mode of transmission	a way that the causative agent can be transmitted to another reservoir or host where it can live
+reservoir	a place for the infectious agent to live and grow (could be human, animal, or any surface).
+portal of exit	the way that pathogens leave the body (blood, bodily fluids, excretions)
+portal of entry	the way that pathogens enter the new reservoir
+direct transmission	transmission of pathogens through contact or droplets (including shaking hands), kissing, coughing, sneezing, and talking
+indirect transmission	transmission of pathogens through the air (airborne), food, water, blood (vehicleborne) or an organism (vectorborne)
